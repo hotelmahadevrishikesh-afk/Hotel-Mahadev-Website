@@ -1,0 +1,11 @@
+/* @font-face {
+  font-family: 'Prata';
+  src: url('./Prata-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */
+.pacifico-h2 {
+  font-family: 'Prata';
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
