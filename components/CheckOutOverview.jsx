@@ -12,7 +12,6 @@ const CheckOutOverview = ({ checkoutData, paymentMethod, onEdit, onConfirm, load
       </div>
     );
   }
-
   // Dummy/fallbacks for demonstration; replace with real data as needed
   const {
     cart: items = [],
