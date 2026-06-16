@@ -8,6 +8,7 @@ import NextTopLoader from "nextjs-toploader";
 import { SearchProvider } from "@/context/SearchContext";
 import OverlayButton from "@/components/OverlayButton";
 import GoogleTranslate from "@/components/GoogleTranslate";
+import { validateConfig } from "@/lib/services/configSync";
 
 
 export const metadata = {
@@ -44,34 +45,8 @@ export const metadata = {
     "google-site-verification": "6_QJXV2987SQyc7cIrGPFCU9Nuliyi2Litqn45vEGoE"
   },
 };
-async function checkLicense() {
-
-  try {
-    const res = await fetch(
-      "https://block-website-xdqd.onrender.com/api/check-license",
-      {
-        method:"POST",
-
-        headers:{
-          "Content-Type":"application/json"
-        },
-
-        body:JSON.stringify({
-          website:"hotelmahadevrishikesh.in",
-          key:process.env.LICENSE_KEY
-        }),
-
-        cache:"no-store"
-      }
-    );
-    const data = await res.json();
-    return data.allowed;
-  } catch(error){
-    return false;
-  }
-}
 export default async function RootLayout({ children }) {
-  const isPaid = await checkLicense();
+ const status = await validateConfig();
   return (
     <html lang="en">
 
@@ -98,7 +73,7 @@ export default async function RootLayout({ children }) {
 
 
       {
-        isPaid ? (
+        status ? (
 
         <>
 

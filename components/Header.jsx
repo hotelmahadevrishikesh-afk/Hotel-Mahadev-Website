@@ -195,7 +195,7 @@ const Header = () => {
       </div>
       <div className="lg:flex hidden items-center z-50 justify-center md:justify-between py-2 md:px-4 ">
         <Link href={"/"}>
-          <img className="w-44 drop-shadow-xl" src="/logo.png" alt="Rishikesh Handmade" />
+          <img className="w-44 drop-shadow-xl" src="/logo.png" alt="Hotel Mahdev Rishikesh" />
         </Link>
 
         <div className="relative flex items-center">
@@ -213,7 +213,7 @@ const Header = () => {
           <MenuBar menuItems={menuItems} />
         </div>
         <Link href={"/"}>
-          <img className="w-32 drop-shadow-xl" src="/logo.png" alt="Rishikesh Handmade" />
+          <img className="w-32 drop-shadow-xl" src="/logo.png" alt="Hotel Mahdev Rishikesh" />
         </Link>
 
         <div className="flex items-center gap-3">

@@ -139,7 +139,7 @@ const ArtisanDetails = ({ artisan }) => {
   const handleExpertSubmit = async (e) => {
     e.preventDefault();
     try {
-      const payload = { ...expertForm, type: 'instructor',artisanId:artisan._id,queryName:artisan.title+artisan.firstName+artisan.lastName };
+      const payload = { ...expertForm, type: 'instructor', artisanId: artisan._id, queryName: artisan.title + artisan.firstName + artisan.lastName };
       const res = await fetch('/api/askExpertsEnquiry', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -177,27 +177,27 @@ const ArtisanDetails = ({ artisan }) => {
   };
   const fetchArtisanReviews = async () => {
     try {
-        const response = await fetch(`/api/saveReviews?type=artisan&artisanId=${artisan._id}&approved=true`);
-        const data = await response.json();
-        if (response.ok) {
-            // Only show approved and active reviews (optional)
-            const filtered = data.reviews.filter(review =>
-                review.approved !== false &&
-                review.deleted !== true
-            );
-            setArtisanReviews(filtered || []);
-        }
+      const response = await fetch(`/api/saveReviews?type=artisan&artisanId=${artisan._id}&approved=true`);
+      const data = await response.json();
+      if (response.ok) {
+        // Only show approved and active reviews (optional)
+        const filtered = data.reviews.filter(review =>
+          review.approved !== false &&
+          review.deleted !== true
+        );
+        setArtisanReviews(filtered || []);
+      }
     } catch (error) {
-        toast.error('Failed to load artisan reviews');
+      toast.error('Failed to load artisan reviews');
     }
-};
-useEffect(() => {
+  };
+  useEffect(() => {
     if (artisan?._id) {
-        fetchArtisanReviews();
+      fetchArtisanReviews();
     }
-}, [artisan?._id]);
-const mixReviews=[...artisan.promotions,...artisanReviews];
-// console.log(mixReviews)
+  }, [artisan?._id]);
+  const mixReviews = [...artisan.promotions, ...artisanReviews];
+  // console.log(mixReviews)
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-amber-50 to-white flex flex-col items-center px-2 md:px-0">
@@ -375,7 +375,7 @@ const mixReviews=[...artisan.promotions,...artisanReviews];
                           type="number"
                           name="phone"
                           min={10}
-                          
+
                           value={expertForm.phone}
                           onChange={handleExpertInputChange}
                           placeholder="Phone Number"
@@ -689,7 +689,7 @@ const mixReviews=[...artisan.promotions,...artisanReviews];
             </h2>
             <h2 className="text-2xl font-bold mb-4">Celebrating the Art of Craftsmanship. Honoring the Hands That Shape Beauty</h2>
             <div className="text-md text-gray-700 mb-6">
-              We are proud to recognize and celebrate your exceptional talent and dedication as a skilled handicraft artisan. Your ability to transform raw materials into beautiful, meaningful works of art speaks to your creativity, precision, and passion for the craft. Each piece you create is a testament to the enduring value of handmade artistry and the cultural richness it preserves. With deep appreciation, we commend you for achieving this milestone and look forward to witnessing your continued journey of artistic excellence.
+              We are proud to recognize and celebrate your exceptional talent and dedication as a skilled handicraft artisan. Your ability to transform raw materials into beautiful, meaningful works of art speaks to your creativity, precision, and passion for the craft. Each piece you create is a testament to the enduring value of Hotel Mahdev Rishikesh artistry and the cultural richness it preserves. With deep appreciation, we commend you for achieving this milestone and look forward to witnessing your continued journey of artistic excellence.
             </div>
           </div>
           {/* Right: Top 2 artisan cards in new style */}
@@ -697,7 +697,7 @@ const mixReviews=[...artisan.promotions,...artisanReviews];
             {(otherArtisans && otherArtisans.slice(0, 2).map((item, idx) => {
               const card = {
                 id: item._id || idx,
-                slug:item.slug,
+                slug: item.slug,
                 name: `${item.title ? item.title + " " : ""}${item.firstName || ''} ${item.lastName || ''}`.trim() || "Unknown Artisan",
                 date: item.createdAt ? new Date(item.createdAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }).toUpperCase() : "N/A",
                 image: item.profileImage?.url || item.image || "/bg-custom-1.jpg",
@@ -803,7 +803,7 @@ const mixReviews=[...artisan.promotions,...artisanReviews];
                 {otherArtisans.slice(2).map((item, idx) => {
                   const card = {
                     id: item._id || idx,
-                    slug:item.slug,
+                    slug: item.slug,
                     name: `${item.title ? item.title + " " : ""}${item.firstName || ''} ${item.lastName || ''}`.trim() || "Unknown Artisan",
                     date: item.createdAt ? new Date(item.createdAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }).toUpperCase() : "N/A",
                     image: item.profileImage?.url || item.image || "/bg-custom-1.jpg",
@@ -920,7 +920,7 @@ const mixReviews=[...artisan.promotions,...artisanReviews];
                 {otherArtisans.map((item, idx) => {
                   const card = {
                     id: item._id || idx,
-                    slug:item.slug,
+                    slug: item.slug,
                     name: `${item.title ? item.title + " " : ""}${item.firstName || ''} ${item.lastName || ''}`.trim() || "Unknown Artisan",
                     date: item.createdAt ? new Date(item.createdAt).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }).toUpperCase() : "N/A",
                     image: item.profileImage?.url || item.image || "/bg-custom-1.jpg",

@@ -17,7 +17,6 @@ export default async function Home() {
       <RoomSection />
       <AboutUsSection />
       <Banner />
-      {/* <RandomTourPackageSection />   */}
       <InstaBlog />
       <Social/>
       <ChatBot/>

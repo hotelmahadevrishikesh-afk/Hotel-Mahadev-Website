@@ -48,7 +48,7 @@ const CheckOutOverview = ({ checkoutData, paymentMethod, onEdit, onConfirm, load
           <div className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl w-full relative flex flex-col items-center" id="invoice-print-section">
             {/* Logo at the top */}
             {/* <div className="mb-4 flex flex-col items-center w-full">
-              <img src="/logo.png" alt="Rishikesh Handmade Logo" className="h-14 mb-2" style={{ objectFit: 'contain' }} onError={e => { e.target.style.display = 'none' }} />
+              <img src="/logo.png" alt="Hotel Mahadev Rishikesh Logo" className="h-14 mb-2" style={{ objectFit: 'contain' }} onError={e => { e.target.style.display = 'none' }} />
             </div> */}
             {/* Address and Customer Info */}
             {/* <div className="mb-4 w-full text-sm text-gray-700 bg-[#fcf7f2] rounded-lg px-4 py-3">
@@ -170,7 +170,7 @@ const CheckOutOverview = ({ checkoutData, paymentMethod, onEdit, onConfirm, load
                     thankYouHtml = content.innerHTML;
                   }
                   const printWindow = window.open('', '', 'width=900,height=900');
-             printWindow.document.write(`
+                  printWindow.document.write(`
     <html>
       <head>
         <title>Order Invoice</title>
@@ -191,7 +191,7 @@ const CheckOutOverview = ({ checkoutData, paymentMethod, onEdit, onConfirm, load
       </head>
       <body>
         <div class=\"invoice-section\">
-          <img src='/logo.png' alt='Rishikesh Handmade Logo' style='height:56px;object-fit:contain;margin-bottom:12px;display:flex;align-items:center;width:100%;' />
+          <img src='/logo.png' alt='Hotel Mahdev Rishikesh Logo' style='height:56px;object-fit:contain;margin-bottom:12px;display:flex;align-items:center;width:100%;' />
           ${addressHtml}
 
           ${productTableHtml}

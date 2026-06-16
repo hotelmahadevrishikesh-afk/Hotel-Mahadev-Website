@@ -793,7 +793,7 @@ const CartDetails = () => {
                 <span className="font-semibold">Quality You Can Trust</span>
               </div>
               <div className="text-xs text-gray-600 mt-1 max-w-xs text-center">
-                Your Rishikesh Handmade Guides are available 24/7/365 to answer
+                Your Hotel Mahadev Rishikesh Guides are available 24/7/365 to answer
                 your question and help you better understand your purchase.
               </div>
             </div>

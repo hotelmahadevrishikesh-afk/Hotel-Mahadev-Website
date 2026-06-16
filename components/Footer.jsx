@@ -288,7 +288,7 @@ const Footer = () => {
                             🙏 Thank you for choosing Hotel Mahadev Rishikesh. May your stay be as memorable as it is enriching.
 
                         </p>
-                        <p className="text-black font-semibold text-sm lg:w-[40vw] xl:w-[35vw] font-barlow mt-5">Our website is your gateway to the heart of Rishikesh, offering rich and soulful handmade creations crafted by local artisans.</p>
+                        <p className="text-black font-semibold text-sm lg:w-[40vw] xl:w-[35vw] font-barlow mt-5">Our website is your gateway to the heart of Rishikesh, offering rich and soulful Hotel Mahdev Rishikesh creations crafted by local artisans.</p>
                     </div>
                     <div className="font-barlow mt-10 lg:mt-0">
                         <h1 className="font-semibold text-xl ">Subscribe to our newsletter</h1>

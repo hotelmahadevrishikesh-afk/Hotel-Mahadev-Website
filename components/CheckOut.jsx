@@ -193,7 +193,7 @@ const CheckOut = () => {
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
         amount: finalAmount * 100,
         currency: "INR",
-        name: "Rishikesh Handmade",
+        name: "Hotel Mahdev Rishikesh",
         description: "Order Payment",
         order_id: razorpayOrderId,
         handler: async (response) => {
@@ -1161,15 +1161,15 @@ const CheckOut = () => {
       {/* Billing Details Form */}
       <div className="flex-1 bg-white rounded-lg shadow p-8">
         <div className="border-b border-gray-200 pb-4 mb-6">
-          <p className="text-xl font-bold">Thanks for being a loyal customer, Your cart is ready. Rishkish Handmade is a trusted growth partner to millions of everyday entrepreneurs.</p>
+          <p className="text-xl font-bold">Thanks for being a loyal customer, Your cart is ready. Rishkish Hotel Mahdev Rishikesh is a trusted growth partner to millions of everyday entrepreneurs.</p>
           <br />
           <p className="text-lg font-bold">Dear Customer,To proceed with your order and ensure smooth delivery, we kindly request you to provide the following basic information:</p>
         </div>
 
-           <form className="space-y-6" onSubmit={(e) => {
-             e.preventDefault();
-             handlePlaceOrder(e);
-           }}>
+        <form className="space-y-6" onSubmit={(e) => {
+          e.preventDefault();
+          handlePlaceOrder(e);
+        }}>
           <div>
             <h3 className="text-md font-semibold mb-4">Basic Profile</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
